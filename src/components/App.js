@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/App.css';
-
-
 //import components and containers
-
 
 class App extends Component {
   render() {
