@@ -18,6 +18,7 @@ class UserDetail extends Component {
     }
     //get user id from params of URL
     const { id } = this.props.match.params;
+    console.log('get your props:', this.props);
     //map over the accounts for the user to create links to them.
     let accounts = this.props.user.accounts.map(account => {
 
@@ -62,6 +63,11 @@ function mapStateToProps(state) {
   };
 }
 
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    selectAccount: selectAccount,
+  }, dispatch);
+}
 
 /*
 

@@ -27,20 +27,20 @@ const reducer = function(state = initialState, action) {
             const accountIdx = state.users[userIdx].accounts.findIndex(account => account.id === state.selectedAccount);
 
             return update(state, {
-                users: {
-                    [userIdx]: {
-                        accounts: {
-                            [accountIdx]: {
-                                balance: {
-                                    $apply: function(balance) {
-                                        return balance - action.payload
-                                    }
-                                }
-                            }
+            users: {
+              [userIdx]: {
+                accounts: {
+                  [accountIdx]: {
+                    balance: {
+                      $apply: function(balance) {
+                        return balance - action.payload
+                          }
                         }
+                      }
                     }
+                  }
                 }
-            })
+              })
         default:
             return state;
     }
