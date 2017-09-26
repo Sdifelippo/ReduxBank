@@ -32,28 +32,6 @@ const reducer = function(state = initialState, action) {
         const account = newState.selectedAccount;
         account.balance -= action.payload;
         return newState;
-			// case WITHDRAW_FUNDS:
-			// 	// const userIdx = newState.users.findIndex(user => user._id === newState.selectedUser);
-			// 	// const accountIdx = newState.users[userIdx].accounts.findIndex(account => account.id === state.selectedAccount);
-			// 	const account = newState.accout.balance;
-			// 	newState.users[userIdx].accounts[accountIdx].balance -= action.payload;
-			// 	return newState;
-
-					// return update(state, {      THIS IS FROM IMMUTABILITY HELPER - WE ARE USING LODASH INSTEAD
-					//     users: {
-					//         [userIdx]: {
-					//             accounts: {
-					//                 [accountIdx]: {
-					//                     balance: {
-					//                         $apply: function(balance) {
-					//                             return balance - action.payload
-					//                         }
-					//                     }
-					//                 }
-					//             }
-					//         }
-					//     }
-					// })
 			default:
 				return state;
     }

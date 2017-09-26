@@ -19,8 +19,8 @@ class AccountDetails extends Component {
         <div className= "card">
           <div className= "card-block">
             <h4 className= "card-title">Account Information</h4>
-            <h6 className= "card-subtitle mb-2 text-muted">{this.props.user.name}</h6>
-            <h6 className= "card-subtitle mb-2 text-muted">{this.props.account.accountType}</h6>
+            <h6 className= "card-subtitle mb-4 text-muted">{this.props.user.name}</h6>
+            <h6 className= "card-subtitle mb-5 text-muted">{this.props.account.accountType}</h6>
             <div className= "card-text">
               <div>{this.props.account.balance}</div>
             </div>
@@ -39,11 +39,9 @@ function mapStateToProps(state) {
     account: state.selectedAccount
   };
 }
-
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
 
   }, dispatch)
 }
-
 export default connect(mapStateToProps,  mapDispatchToProps)(AccountDetails);

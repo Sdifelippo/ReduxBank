@@ -18,7 +18,63 @@
   font-size: large;
 }
 
+.navigation{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 40rem;
+  margin-right: 40rem;
+  @include media-breakpoint-up(sm) {
+    html {
+      font-size: 16px;
+    }
+  }
+}
+.list-group-item{
+  background-color: #E4E7EB;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+html {
+  font-size: 14px;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 28px;
+  }
+}
+
+a.navItem {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 2em;
+  margin: -2em;
+}
+
+.btn-primary{
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  margin-top: 0px;
+  margin-left: -1px;
+  margin-right: 20rem;
+}
+
+li.list-group-item{
+  width: 40rem;
 }

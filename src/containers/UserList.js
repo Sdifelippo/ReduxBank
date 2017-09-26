@@ -19,6 +19,7 @@ class UserList extends Component {
         return (
             <div>
               <h5>Users with open accounts:</h5>
+              <hr></hr>
               <ul>
                 {users}
               </ul>
